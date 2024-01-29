@@ -65,7 +65,8 @@ def split(all_data , random_state:int, constring):
       
     db = create_engine(constring) 
     
-    all_data['Up'] = (all_data['Close'] - all_data['Open'] > 0).astype(int)
+    all_data['Open_tmr'] = all_data['Open'].shift(-1)
+    all_data['Up'] = (all_data['Open_tmr'] - all_data['Close'] > 0).astype(int)
 
     features = all_data[['Open', 'High', 'Low', 'Close', 'Adj Close', 'Volume']]
 
