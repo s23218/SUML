@@ -7,31 +7,29 @@ CREATE TABLE health_data (
     bmi NUMERIC,
     HbA1c_level NUMERIC,
     blood_glucose_level INTEGER,
-    diabetes INTEGER
+    stocks_pred INTEGER
 );
 
-CREATE TABLE train (
-    gender VARCHAR(10),
-    age NUMERIC,
-    hypertension INTEGER,
-    heart_disease INTEGER,
-    smoking_history VARCHAR(20),
-    bmi NUMERIC,
-    HbA1c_level NUMERIC,
-    blood_glucose_level INTEGER,
-    diabetes INTEGER
+'Open', 'High', 'Low', 'Close', 'Adj Close', 'Volume'
+
+CREATE TABLE train_st (
+    Open NUMERIC,
+    High NUMERIC,
+    Low NUMERIC,
+    Close NUMERIC,
+    Adj_Close NUMERIC,
+    Volume NUMERIC,
+    Up NUMERIC
 );
 
-CREATE TABLE test (
-    gender VARCHAR(10),
-    age NUMERIC,
-    hypertension INTEGER,
-    heart_disease INTEGER,
-    smoking_history VARCHAR(20),
-    bmi NUMERIC,
-    HbA1c_level NUMERIC,
-    blood_glucose_level INTEGER,
-    diabetes INTEGER
+CREATE TABLE test_st (
+    Open NUMERIC,
+    High NUMERIC,
+    Low NUMERIC,
+    Close NUMERIC,
+    Adj_Close NUMERIC,
+    Volume NUMERIC,
+    Up NUMERIC
 );
 
 CREATE TABLE validate (
@@ -43,5 +41,5 @@ CREATE TABLE validate (
     bmi NUMERIC,
     HbA1c_level NUMERIC,
     blood_glucose_level INTEGER,
-    diabetes INTEGER
+    stocks_pred INTEGER
 );

@@ -12,7 +12,7 @@ urla = "http://127.0.0.1:8000/model_download"
 model = pickle.load(urllib.request.urlopen(urla))
 print(model)
 
-st.write("co ja robie")
+st.write("Stocks pred")
 
 if st.button("run pipeline"):
     session.run()    
@@ -20,23 +20,21 @@ if st.button("run pipeline"):
 if st.button("load new model"):
     model = pickle.load(urllib.request.urlopen(urla))
 
-gender = st.text_input("gender")
-age = st.text_input("age")
-hypertension = st.text_input("hypertension")
-heart_disease = st.text_input("heart_disease") 
-smoking_history = st.text_input("smoking history")
-bmi = st.text_input("bmi")
-hba1c_level = st.text_input("hba1c_level")
-blood_glucose_level = st.text_input("blood_glucose_level")
+open = st.text_input("Open")
+high = st.text_input("High")
+low = st.text_input("Low")
+close = st.text_input("close") 
+adj_close = st.text_input("Adj_close") 
+volume = st.text_input("Volume")
 
 pred = None
 
 if st.button("predict"):
-    d = {"gender": [gender], "age": [age], "hypertension": [hypertension], "heart_disease": [heart_disease], "smoking_history": [smoking_history],
-            "bmi": [bmi], "hba1c_level": [hba1c_level], "blood_glucose_level": [blood_glucose_level]}
+    d = {"Open": [open], "High": [high], "Low": [low], "Close": [close], "Adj Close": [adj_close], "Volume": [volume]}
     df = pd.DataFrame(data=d)
-    pred = model.predict(df)
-    
-       
-
+    pred = model.predict(df)[0]
+    if pred == 1:
+        pred = "wzrosnie"
+    if pred == 0:
+        pred = "nie wzrosnie"
 st.header(pred)

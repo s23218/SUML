@@ -1,4 +1,4 @@
-# diabetes
+# stocks_pred
 
 ##Startup
 W "conf\base\parameters_data_processing.yml" znajduje się config do połączenia z bazą danych, w parameters_data_science.yml zmienna model_type pozwala na odpalenie wytworzenie 3 typów modeli:

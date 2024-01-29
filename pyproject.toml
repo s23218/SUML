@@ -1,12 +1,12 @@
 [tool.kedro]
-package_name = "diabetes"
-project_name = "diabetes"
+package_name = "stocks_pred"
+project_name = "stocks_pred"
 kedro_init_version = "0.18.14"
 
 [tool.pytest.ini_options]
 addopts = """
 --cov-report term-missing \
---cov src/diabetes -ra"""
+--cov src/stocks_pred -ra"""
 
 [tool.coverage.report]
 fail_under = 0

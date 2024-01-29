@@ -34,7 +34,7 @@ loggers:
   kedro:
     level: INFO
 
-  diabetes:
+  stocks_pred:
     level: INFO
 
 root:

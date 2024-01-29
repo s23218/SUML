@@ -1,0 +1,47 @@
+{
+    "os": "Windows-10-10.0.22631-SP0",
+    "python": "3.10.0",
+    "heartbeatAt": "2024-01-29T17:35:26.039740",
+    "startedAt": "2024-01-29T17:35:25.369871",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:\\Users\\Prego\\OneDrive\\Pulpit\\Diploma\\suml\\SUML\\app.py",
+    "codePathLocal": "app.py",
+    "codePath": "app.py",
+    "host": "REMEK-PC",
+    "username": "Prego",
+    "executable": "C:\\Users\\Prego\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "cpu_count": 14,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 3500.0,
+        "min": 0.0,
+        "max": 3500.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3500.0,
+            "min": 0.0,
+            "max": 3500.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 930.6835899353027,
+            "used": 717.6623611450195
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 4070 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4070 Ti",
+            "memory_total": 12878610432
+        }
+    ],
+    "memory": {
+        "total": 31.81780242919922
+    }
+}
