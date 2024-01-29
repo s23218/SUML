@@ -1,14 +1,14 @@
 import os
 import sys
-import pandas as pd
 import pickle
+import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, confusion_matrix
 
 def preprocess_data(data_folder):
-
+    """merge the csv and scale the data, returning train/test split data"""
     dfs = []
     all_data = pd.DataFrame()
 
@@ -29,11 +29,13 @@ def preprocess_data(data_folder):
 
     labels = all_data['Up']
 
-    X_train, X_test, y_train, y_test = train_test_split(features_scaled, labels, test_size=0.2, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(features_scaled,
+                                                        labels, test_size=0.2, random_state=42)
 
     return X_train, X_test, y_train, y_test
 
 def build_model(X_train, X_test, y_train, y_test):
+    """build a logistic regression model"""
     model = LogisticRegression()
 
     model.fit(X_train, y_train)
