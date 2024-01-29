@@ -8,3 +8,9 @@ Do uruchomienia fast api należy wykonać następujące komendy:
 
 Do uruchomienia aplikacji streamlit należy wykonać następującą komendę:
 - streamlit run app.py
+
+Użyte technologie:
+- sqlalchemy: do wysłania danych treningowych do bazy danych postgres
+- kedro: podzielenie kodu na pipeliny i nody
+- yfinance: uzyskanie danych o akcjach
+- streamlit: aplikacja webowa umożliwiająca wykonanie predykcji oraz uruchomienie pipelinów
