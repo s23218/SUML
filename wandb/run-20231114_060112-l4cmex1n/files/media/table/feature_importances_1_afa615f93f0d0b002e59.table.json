@@ -1,0 +1,1 @@
+{"columns": ["feature_names", "importances"], "data": [["HbA1c_level", 0.3853921854885431], ["blood_glucose_level", 0.33088843207343865], ["bmi", 0.12062807446363308], ["age", 0.10273332842968827], ["smoking_history", 0.027919676987557908], ["hypertension", 0.015207922365043165], ["heart_disease", 0.010085439446119737], ["gender", 0.00714494074597605]]}

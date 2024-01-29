@@ -1,0 +1,46 @@
+{
+    "os": "macOS-14.0-x86_64-i386-64bit",
+    "python": "3.11.6",
+    "heartbeatAt": "2023-11-06T21:20:37.408637",
+    "startedAt": "2023-11-06T21:20:36.661107",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "run"
+    ],
+    "state": "running",
+    "program": "/usr/local/bin/kedro",
+    "codePathLocal": null,
+    "git": {
+        "remote": null,
+        "commit": "b26f22699a5dfb3bf07d4038d3046c02d908ae6c"
+    },
+    "email": "gulinskijakub@gmail.com",
+    "root": "/Users/jgulinski/projects/ml/diabetes",
+    "host": "Jakubs-MacBook-Pro.local",
+    "username": "jgulinski",
+    "executable": "/usr/local/opt/python@3.11/bin/python3.11",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2000,
+        "min": 2000,
+        "max": 2000
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2000,
+            "min": 2000,
+            "max": 2000
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 465.62699127197266,
+            "used": 9.143409729003906
+        }
+    },
+    "memory": {
+        "total": 16.0
+    }
+}

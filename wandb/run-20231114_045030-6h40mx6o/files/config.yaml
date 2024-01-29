@@ -1,0 +1,59 @@
+wandb_version: 1
+
+learning_rate:
+  desc: null
+  value: 3
+architecture:
+  desc: null
+  value: CNN
+dataset:
+  desc: null
+  value: CIFAR-100
+epochs:
+  desc: null
+  value: 10
+_wandb:
+  desc: null
+  value:
+    python_version: 3.11.6
+    cli_version: 0.16.0
+    framework: sklearn
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1699933830.5091
+    t:
+      1:
+      - 5
+      - 53
+      - 55
+      - 105
+      2:
+      - 5
+      - 53
+      - 55
+      - 105
+      3:
+      - 16
+      - 23
+      4: 3.11.6
+      5: 0.16.0
+      8:
+      - 3
+      - 5
+      13: windows-amd64
+    viz:
+      learning_curve:
+        id: wandb/learning_curve/v1
+        historyFieldSettings:
+          x-axis: _step
+          key: learning_curve
+      feature_importances:
+        id: wandb/feature_importances/v1
+        historyFieldSettings:
+          x-axis: _step
+          key: feature_importances
+      confusion_matrix:
+        id: wandb/confusion_matrix/v1
+        historyFieldSettings:
+          x-axis: _step
+          key: confusion_matrix

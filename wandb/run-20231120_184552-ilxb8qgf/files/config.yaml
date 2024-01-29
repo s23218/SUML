@@ -1,0 +1,47 @@
+wandb_version: 1
+
+learning_rate:
+  desc: null
+  value: 3
+architecture:
+  desc: null
+  value: CNN
+dataset:
+  desc: null
+  value: CIFAR-100
+epochs:
+  desc: null
+  value: 10
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.0
+    cli_version: 0.16.0
+    framework: lightgbm
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1700502352.220445
+    t:
+      1:
+      - 5
+      - 15
+      - 53
+      - 55
+      - 105
+      2:
+      - 1
+      - 5
+      - 8
+      - 15
+      - 53
+      - 55
+      - 105
+      3:
+      - 16
+      - 23
+      4: 3.10.0
+      5: 0.16.0
+      8:
+      - 3
+      - 5
+      13: windows-amd64
