@@ -5,5 +5,6 @@ Aplikacja pozwala na przewidywanie kursu akcji na giełdzie na podstawie cen otw
 Do uruchomienia fast api należy wykonać następujące komendy:
 - cd src/fastpi
 - uvicorn modelapi:app --reload
+
 Do uruchomienia aplikacji streamlit należy wykonać następującą komendę:
 - streamlit run app.py
