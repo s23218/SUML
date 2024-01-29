@@ -11,20 +11,6 @@ def create_model(X_train, y_train, model_type, hyper):
     model = LogisticRegression()
     model.fit(X_train, y_train)
     
-    # if(model_type == "autogluon"):
-
-    #     label = 'stocks_pred'
-    #     dataset = TabularDataset(X_train)
-    #     clf = TabularPredictor(label)
-    #     clf.fit(dataset, hyperparameters=hyper)
-    # elif(model_type == "regression"):
-    #     X_train = X_train.drop("stocks_pred", axis=1)
-    #     clf = LogisticRegression()
-    #     clf.fit(X_train, y_train)
-    # else:            
-    #     X_train = X_train.drop("stocks_pred", axis=1)   
-    #     clf = RandomForestClassifier(n_estimators=100, random_state=42)
-    #     clf.fit(X_train, y_train)
      
     coln = []
     for col in X_train.columns:

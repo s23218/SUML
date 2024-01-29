@@ -68,6 +68,8 @@ def split(all_data , random_state:int, constring):
     all_data['Open_tmr'] = all_data['Open'].shift(-1)
     all_data['Up'] = (all_data['Open_tmr'] - all_data['Close'] > 0).astype(int)
 
+    all_data.to_sql('stocks', db, if_exists='replace', index=False)
+
     features = all_data[['Open', 'High', 'Low', 'Close', 'Adj Close', 'Volume']]
 
     scaler = StandardScaler()
@@ -79,10 +81,6 @@ def split(all_data , random_state:int, constring):
     labels = all_data['Up']
 
     X_train, X_test, y_train, y_test = train_test_split(features_scaled, labels, test_size=0.2, random_state=random_state)
-    
-    X_train.to_sql('train_x', db, if_exists='replace', index=False)
-    y_train.to_sql('train_y', db, if_exists='replace', index=False)
-    X_test.to_sql('test_x', db, if_exists='replace', index=False)
-    y_test.to_sql('test_y', db, if_exists='replace', index=False)
+
 
     return X_train, X_test, y_train, y_test
