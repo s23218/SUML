@@ -1,27 +1,23 @@
+import os
+import sys
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
-from autogluon.tabular import TabularDataset, TabularPredictor
-import psycopg2
-import wandb
-from sqlalchemy import create_engine 
+from sklearn.preprocessing import StandardScaler
+from sqlalchemy import create_engine
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
-import os
-from sklearn.preprocessing import StandardScaler
-import sys
-import yfinance as yf
 from pandas_datareader import data as pdr
+import psycopg2
+import wandb
+import yfinance as yf
 
 def download(symbols):
     symbols = symbols
-    
+
     symbols = symbols.split()
 
     yf.pdr_override()
-    stocks = [symbols]
-
-    all_data = pd.DataFrame()
 
     os.makedirs('stocks', exist_ok=True)
     for stock in symbols:
@@ -47,28 +43,20 @@ def preprocess_data(data_folder):
             dfs.append(stock_data)
 
     all_data = pd.concat(dfs, ignore_index=True)
-    
-    
+
     return all_data
-
-
-
 
 
 def init_wandb(configg):
     wandb.init(
     project="suml",
     config=configg)
-    
-    
-def split(all_data , random_state:int, constring):   
-      
-    db = create_engine(constring) 
-    
+
+
+def split(all_data , random_state:int, constring):
+
     all_data['Open_tmr'] = all_data['Open'].shift(-1)
     all_data['Up'] = (all_data['Open_tmr'] - all_data['Close'] > 0).astype(int)
-
-    all_data.to_sql('stocks', db, if_exists='replace', index=False)
 
     features = all_data[['Open', 'High', 'Low', 'Close', 'Adj Close', 'Volume']]
 

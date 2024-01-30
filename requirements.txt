@@ -10,3 +10,4 @@ wandb==0.16.0
 sdv==1.9.0
 yfinance==0.2.36
 pandas_datareader==0.10.0
+kedro_datasets==2.0.0

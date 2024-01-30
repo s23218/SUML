@@ -1,8 +1,8 @@
+import os
+import zipfile
 import yfinance as yf
 from pandas_datareader import data as pdr
 import pandas as pd
-import zipfile
-import os
 
 with open('symbols.txt', 'r') as file:
     data = file.read()

@@ -1,0 +1,53 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.11.4",
+    "heartbeatAt": "2024-01-30T09:07:22.740614",
+    "startedAt": "2024-01-30T09:07:22.106313",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:\\Users\\s22686\\Documents\\GitHub\\SUML\\app.py",
+    "codePathLocal": "app.py",
+    "codePath": "app.py",
+    "git": {
+        "remote": "https://github.com/s23218/SUML.git",
+        "commit": "31a5bbf22758ba061254c0a6985d3da512780781"
+    },
+    "email": null,
+    "root": "C:/Users/s22686/Documents/GitHub/SUML",
+    "host": "LAB262-01",
+    "username": "s22686",
+    "executable": "C:\\Program Files\\Python311\\python.exe",
+    "cpu_count": 12,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 2100.0,
+        "min": 0.0,
+        "max": 2100.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2100.0,
+            "min": 0.0,
+            "max": 2100.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 399.99999618530273,
+            "used": 261.94293212890625
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3070",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3070",
+            "memory_total": 8589934592
+        }
+    ],
+    "memory": {
+        "total": 31.696025848388672
+    }
+}
